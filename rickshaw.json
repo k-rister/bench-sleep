@@ -1,0 +1,19 @@
+{
+    "rickshaw-benchmark": {
+        "schema": {
+            "version": "2020.05.18"
+        }
+    },
+    "benchmark": "sleep",
+    "controller" : {
+        "post-script" : "%bench-dir%sleep-post-process"
+    },
+    "client" : {
+        "files-from-controller": [
+            { "src": "%bench-dir%/sleep-get-runtime", "dest": "/usr/bin/" },
+            { "src": "%bench-dir%/sleep-client", "dest": "/usr/bin/" }
+        ],
+        "runtime" : "sleep-get-runtime",
+        "start" : "sleep-client"
+    }
+}
