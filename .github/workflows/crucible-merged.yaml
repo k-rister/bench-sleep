@@ -18,7 +18,7 @@ jobs:
     uses: perftool-incubator/crucible-ci/.github/workflows/benchmark-crucible-ci.yaml@main
     with:
       ci_target: "sleep"
-      ci_target_branch: "master"
+      ci_target_branch: "main"
       github_workspace: "$GITHUB_WORKSPACE"
     secrets:
       production_registry_auth: ${{ secrets.CRUCIBLE_PRODUCTION_ENGINES_REGISTRY_AUTH }}
